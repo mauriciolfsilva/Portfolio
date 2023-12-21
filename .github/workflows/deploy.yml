@@ -1,11 +1,10 @@
-name: GH Pages - Deploy
-
-run-name: Deploy
+name: deploy
 
 on:
   push:
     branches:
       - master
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,9 +15,9 @@ jobs:
           node-version: '16'
       - name: setup git auth
         env:
-          email: 'mauriciolfsilva@gmail.com'
-          username: 'mauriciolfsilva'
-          access_token: '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'
+          email: '${{ secrets.AUTH_EMAIL }}'
+          username: '${{ secrets.AUTH_USERNAME }}'
+          access_token: '${{ secrets.AUTH_ACCESS_TOKEN }}'
         run: |
           git config --global credential.helper store
           echo "https://${access_token}:x-oauth-basic@github.com" > ~/.git-credentials
