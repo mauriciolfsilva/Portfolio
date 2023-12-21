@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <MyNavbar @change-section="updateSection" />
+    <MainContent :currentSection="currentSection" />
+    <MyFooter />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyNavbar from './components/MyNavbar.vue';
+import MainContent from './components/MainContent.vue';
+import MyFooter from './components/MyFooter.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    MyNavbar,
+    MainContent,
+    MyFooter
+  },
+  data() {
+    return {
+      currentSection: 'home'
+    };
+  },
+  methods: {
+    updateSection(section) {
+      this.currentSection = section;
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Estilos gerais do seu site */
 </style>
