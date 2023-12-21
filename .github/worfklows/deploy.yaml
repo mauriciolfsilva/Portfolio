@@ -1,7 +1,11 @@
-// .github/workflows/deploy.yamlname: deployon:
+// .github/workflows/deploy.yaml
+
+name: deploy
+on:
   push:
     branches:
-      - masterjobs:
+      - master
+jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
