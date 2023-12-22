@@ -1,14 +1,14 @@
 <template>
-    <footer>
-      <p>Entre em contato: exemplo@email.com | Telefone: (xx) xxxxx-xxxx</p>
-    </footer>
-  </template>
+  <footer>
+    <p>Entre em contato: exemplo@email.com | Telefone: (xx) xxxxx-xxxx</p>
+  </footer>
+</template>
   
-  <script>
+<script>
   export default {
   }
-  </script>
+</script>
   
-  <style>
-  </style>
+<style>
+</style>
   

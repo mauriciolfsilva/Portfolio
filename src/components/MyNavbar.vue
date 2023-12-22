@@ -1,15 +1,15 @@
 <template>
-    <nav>
-      <ul>
-        <li @click="changeSection('home')">Início</li>
-        <li @click="changeSection('about')">Sobre</li>
-        <li @click="changeSection('qualifications')">Qualificações</li>
-        <li @click="changeSection('hobbies')">Hobbies</li>
-      </ul>
-    </nav>
-  </template>
+  <nav>
+    <ul>
+      <li @click="changeSection('home')">Início</li>
+      <li @click="changeSection('about')">Sobre</li>
+      <li @click="changeSection('qualifications')">Qualificações</li>
+      <li @click="changeSection('hobbies')">Hobbies</li>
+    </ul>
+  </nav>
+</template>
   
-  <script>
+<script>
   export default {
     methods: {
       changeSection(section) {
@@ -17,8 +17,8 @@
       }
     }
   }
-  </script>
+</script>
   
-  <style>
-  </style>
+<style>
+</style>
   

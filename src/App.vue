@@ -2,7 +2,7 @@
   <div id="app">
     <MyNavbar @change-section="updateSection" />
     <MainContent :currentSection="currentSection" />
-    <MyFooter />
+    <MyFooter/>
   </div>
 </template>
 
@@ -31,5 +31,4 @@ export default {
 </script>
 
 <style>
-/* Estilos gerais do seu site */
 </style>
